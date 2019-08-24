@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/id_ToobarCarrinho"
+        android:background="@drawable/toobar_birpo"
+        >
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/ic_dehaze"/>
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/birpo_min"
+            android:layout_marginLeft="110dp"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/id_recycleView"
+        android:layout_below="@+id/id_ToobarCarrinho"
+        >
+
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+</RelativeLayout>
