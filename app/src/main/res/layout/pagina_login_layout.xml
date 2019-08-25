@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PaginaLogin_Activity"
+    android:background="@drawable/fundo_birpo">
+
+    <RelativeLayout
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="56dp"
+            android:src="@drawable/birpo_logo" />
+
+        <EditText
+            android:id="@+id/txtUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgLogo"
+            android:layout_marginLeft="46dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginRight="46dp"
+            android:background="@drawable/senha_birpo"
+            android:hint="Username"
+            android:padding="10dp"
+            android:textSize="26sp" />
+
+        <EditText
+            android:id="@+id/txtSenha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtUsuario"
+            android:layout_marginLeft="46dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="46dp"
+            android:background="@drawable/senha_birpo"
+            android:hint="Password"
+            android:padding="10dp"
+            android:textSize="26sp" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtSenha"
+            android:layout_marginLeft="135dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="135dp"
+            android:background="@drawable/botao_login"
+            android:padding="5dp"
+            android:text="Login"
+            android:textAllCaps="false"
+            android:textColor="#Fff"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/txtForget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnLogin"
+            android:layout_marginTop="12dp"
+            android:text="Forget Password?"
+            android:textAlignment="center"
+            android:textColor="#ED5657"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/txtSkip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtForget"
+            android:layout_marginLeft="9dp"
+            android:layout_marginTop="134dp"
+            android:text="Skip"
+            android:textAlignment="center"
+            android:textColor="#ED5657"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/txtCreate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtForget"
+            android:layout_toRightOf="@+id/txtSkip"
+            android:layout_marginLeft="180dp"
+            android:layout_marginTop="134dp"
+            android:text="Create an Account?"
+            android:textAlignment="center"
+            android:textColor="#ED5657"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

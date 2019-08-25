@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -30,13 +31,13 @@ public class ProdutosAdapter extends RecyclerView.Adapter<ProdutosAdapter.MyView
         LayoutInflater mInflate = LayoutInflater.from(mContext);
         view = mInflate.inflate(R.layout.card_view_produtos,parent,false);
 
-
         return new MyViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        holder.textProduto.setText(mData.get(position).getnProduto());
+        holder.nProduto.setText(mData.get(position).getnProduto());
+        holder.dProduto.setText(mData.get(position).getdProduto());
         holder.imgProduto.setImageResource(mData.get(position).getImgProduto());
     }
 
@@ -46,13 +47,16 @@ public class ProdutosAdapter extends RecyclerView.Adapter<ProdutosAdapter.MyView
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView textProduto;
+        TextView nProduto,dProduto;
+        Button btnProduto;
         ImageView imgProduto;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            textProduto = (TextView)itemView.findViewById(R.id.nProduto);
+            nProduto = (TextView)itemView.findViewById(R.id.nProduto);
+            dProduto = (TextView)itemView.findViewById(R.id.dProduto);
+            btnProduto = (Button)itemView.findViewById(R.id.btnProduto);
             imgProduto = (ImageView)itemView.findViewById(R.id.imgProduto);
 
         }

@@ -14,17 +14,17 @@
         android:orientation="vertical">
 
         <ImageView
-            android:id="@+id/imgProduto"
+            android:id="@+id/imgProdutoDois"
             android:layout_width="match_parent"
             android:layout_height="160dp"
             android:background="#fff"
             android:scaleType="centerCrop" />
 
         <TextView
-            android:id="@+id/nProduto"
+            android:id="@+id/nProdutoDois"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/imgProduto"
+            android:layout_below="@+id/imgProdutoDois"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="5dp"
             android:text="Produto"
@@ -32,23 +32,23 @@
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/dProduto"
+            android:id="@+id/dProdutoDois"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_below="@+id/nProduto"
+            android:layout_below="@+id/nProdutoDois"
             android:layout_marginLeft="16dp"
             android:text="Desc"
             android:textColor="#C42E2E"
             android:textSize="11dp" />
 
         <Button
-            android:id="@+id/btnProduto"
+            android:id="@+id/btnProdutoDois"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:layout_below="@+id/imgProduto"
+            android:layout_below="@+id/imgProdutoDois"
             android:layout_marginLeft="40dp"
             android:layout_marginTop="13dp"
-            android:layout_toRightOf="@id/nProduto"
+            android:layout_toRightOf="@id/nProdutoDois"
             android:background="@drawable/ic_local_grocery_store" />
 
 

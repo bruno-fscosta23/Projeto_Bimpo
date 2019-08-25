@@ -7,32 +7,71 @@
     tools:context=".MainActivity">
 
     <androidx.appcompat.widget.Toolbar
+        android:id="@+id/id_ToobarCarrinho"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/id_ToobarCarrinho"
-        android:background="@drawable/toobar_birpo"
-        >
+        android:background="@drawable/toobar_birpo">
+
         <Button
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:background="@drawable/ic_dehaze"/>
+            android:background="@drawable/ic_dehaze" />
+
         <ImageView
             android:layout_width="130dp"
             android:layout_height="wrap_content"
-            android:src="@drawable/birpo_min"
-            android:layout_marginLeft="110dp"/>
+            android:layout_marginLeft="110dp"
+            android:src="@drawable/birpo_min" />
 
     </androidx.appcompat.widget.Toolbar>
 
-    <androidx.recyclerview.widget.RecyclerView
+    <RelativeLayout
+        android:id="@+id/id_nCorrinho"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/id_recycleView"
-        android:layout_below="@+id/id_ToobarCarrinho"
-        >
+        android:layout_below="@+id/id_ToobarCarrinho">
 
+        <TextView
+            android:id="@+id/txtProduto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:text="Featured Products"
+            android:textColor="#47BFD0"
+            android:textSize="16sp" />
 
-    </androidx.recyclerview.widget.RecyclerView>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/id_recycleView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtProduto"
+            android:layout_marginTop="13dp"
+            tools:ignore="NotSibling">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/txtNovoProduto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/id_recycleView"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="13dp"
+            android:text="New Arrivals"
+            android:textColor="#47BFD0"
+            android:textSize="16sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/id_recycleViewDois"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtNovoProduto"
+            android:layout_marginTop="13dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </RelativeLayout>
 
 
 </RelativeLayout>
