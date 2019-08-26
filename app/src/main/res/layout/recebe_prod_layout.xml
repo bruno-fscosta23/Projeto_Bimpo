@@ -27,7 +27,6 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="15dp"
             android:layout_toRightOf="@+id/txtProd"
-            android:text="NomeProduto"
             android:textColor="#47BFD0"
             android:textSize="16dp" />
 
@@ -49,7 +48,7 @@
                     android:layout_width="180dp"
                     android:layout_height="180dp"
                     android:layout_marginTop="25dp"
-                    android:src="@drawable/imgnescau" />
+                    />
 
                 <TextView
                     android:id="@+id/txtTamanho"
@@ -172,7 +171,6 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/txtDesc"
             android:layout_marginLeft="30dp"
-            android:text="Product Code: Nescafé Classic 200gm"
             android:textColor="#F15458" />
 
         <TextView

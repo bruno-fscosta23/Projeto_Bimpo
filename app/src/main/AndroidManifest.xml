@@ -19,6 +19,9 @@ package="com.example.projeto_bimpo">
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
     </activity>
+    <activity android:name=".Recebe_Prod_Activity">
+
+    </activity>
 </application>
 
 </manifest>

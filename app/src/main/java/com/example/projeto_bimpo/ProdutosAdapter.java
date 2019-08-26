@@ -1,6 +1,7 @@
 package com.example.projeto_bimpo;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
@@ -35,10 +37,24 @@ public class ProdutosAdapter extends RecyclerView.Adapter<ProdutosAdapter.MyView
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
         holder.nProduto.setText(mData.get(position).getnProduto());
         holder.dProduto.setText(mData.get(position).getdProduto());
         holder.imgProduto.setImageResource(mData.get(position).getImgProduto());
+
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext,Recebe_Prod_Activity.class);
+
+                intent.putExtra("nProduto",mData.get(position).getnProduto());
+                intent.putExtra("dProduto",mData.get(position).getdProduto());
+                intent.putExtra("cProduto",mData.get(position).getcProduto());
+                intent.putExtra("imgProduto",mData.get(position).getImgProduto());
+                mContext.startActivity(intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+            }
+        });
+
     }
 
     @Override
@@ -50,6 +66,7 @@ public class ProdutosAdapter extends RecyclerView.Adapter<ProdutosAdapter.MyView
         TextView nProduto,dProduto;
         Button btnProduto;
         ImageView imgProduto;
+        CardView cardView;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -58,6 +75,7 @@ public class ProdutosAdapter extends RecyclerView.Adapter<ProdutosAdapter.MyView
             dProduto = (TextView)itemView.findViewById(R.id.dProduto);
             btnProduto = (Button)itemView.findViewById(R.id.btnProduto);
             imgProduto = (ImageView)itemView.findViewById(R.id.imgProduto);
+            cardView = (CardView)itemView.findViewById(R.id.idCardView);
 
         }
     }

@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
@@ -25,11 +26,6 @@ public class MainActivity extends AppCompatActivity {
 
     Toolbar toolbar;
 
-    RecyclerView recyclerView;
-
-    String[] nomeProduto = {"Nescafé", "Banana", "Ades Laranja", "Nescau"};
-    int[] imaProduto = {R.drawable.imgnescafe,R.drawable.banana,R.drawable.imgades,R.drawable.imgnescau};
-
     @Override
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,9 +44,10 @@ public class MainActivity extends AppCompatActivity {
         lstProdutos.add(new Produtos("Banana", "1 Duzia","Descrição do Produto",R.drawable.banana));
 
 
+
         RecyclerView recyclerView =(RecyclerView) findViewById(R.id.id_recycleView);
         ProdutosAdapter mAdapter = new ProdutosAdapter(getApplicationContext(),lstProdutos);
-        recyclerView.setLayoutManager(new GridLayoutManager(getApplicationContext(),2));
+        recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.HORIZONTAL,false));
         recyclerView.setAdapter(mAdapter);
 
         //Novo RecycleView
@@ -58,18 +55,13 @@ public class MainActivity extends AppCompatActivity {
         lstProdutosDois = new ArrayList<>();
         lstProdutosDois.add(new ProdutosDois("Ades","500ml","500ml",R.drawable.imgades));
         lstProdutosDois.add(new ProdutosDois("Nescau","420g","420g",R.drawable.imgnescau));
+        lstProdutosDois.add(new ProdutosDois("Ades", "500ml", "500ml", R.drawable.imgades));
+        lstProdutosDois.add(new ProdutosDois("Nescau", "420g", "420g", R.drawable.imgnescau));
 
         RecyclerView recyclerView1 = (RecyclerView) findViewById(R.id.id_recycleViewDois);
         ProdutoDoisAdapter mAdapterDois = new ProdutoDoisAdapter(getApplicationContext(),lstProdutosDois);
-        recyclerView1.setLayoutManager(new GridLayoutManager(getApplicationContext(),2));
+        recyclerView1.setLayoutManager(new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.HORIZONTAL,false));
         recyclerView1.setAdapter(mAdapterDois);
-
-
-        recyclerView = (RecyclerView) findViewById(R.id.id_recycleView);
-
-
-
-
     }
 
     @Override
@@ -86,4 +78,5 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
 }

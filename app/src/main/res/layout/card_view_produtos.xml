@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/idCardView"
     android:layout_width="160dp"
     android:layout_height="210dp"
     android:layout_marginLeft="18dp"
@@ -50,8 +51,5 @@
             android:layout_marginTop="13dp"
             android:layout_toRightOf="@id/nProduto"
             android:background="@drawable/ic_local_grocery_store" />
-
-
     </RelativeLayout>
-
 </androidx.cardview.widget.CardView>
