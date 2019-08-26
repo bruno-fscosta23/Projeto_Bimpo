@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.GridView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -20,6 +21,11 @@ public class MainActivity extends AppCompatActivity {
     List<ProdutosDois> lstProdutosDois;
 
     Toolbar toolbar;
+
+    RecyclerView recyclerView;
+
+    String[] nomeProduto = {"Nescafé", "Banana", "Ades Laranja", "Nescau"};
+    int[] imaProduto = {R.drawable.imgnescafe,R.drawable.banana,R.drawable.imgades,R.drawable.imgnescau};
 
     @Override
 
@@ -54,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
         ProdutoDoisAdapter mAdapterDois = new ProdutoDoisAdapter(getApplicationContext(),lstProdutosDois);
         recyclerView1.setLayoutManager(new GridLayoutManager(getApplicationContext(),2));
         recyclerView1.setAdapter(mAdapterDois);
+
 
     }
 

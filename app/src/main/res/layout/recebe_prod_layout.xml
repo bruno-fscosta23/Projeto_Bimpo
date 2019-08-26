@@ -32,6 +32,7 @@
             android:textSize="16dp" />
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/id_CardView"
             android:layout_width="370dp"
             android:layout_height="280dp"
             android:layout_below="@+id/txtRecProd"
@@ -39,6 +40,7 @@
             app:cardCornerRadius="4dp">
 
             <RelativeLayout
+                android:id="@+id/id_Card"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
@@ -57,7 +59,7 @@
                     android:layout_marginTop="65dp"
                     android:layout_toRightOf="@+id/id_imgProd"
                     android:text="Weigth: "
-                    android:textColor="#CC0000"
+                    android:textColor="#F15458"
                     android:textSize="16sp" />
 
                 <Button
@@ -80,7 +82,7 @@
                     android:layout_marginTop="25dp"
                     android:layout_toRightOf="@+id/id_imgProd"
                     android:text="Quantily: "
-                    android:textColor="#CC0000"
+                    android:textColor="#F15458"
                     android:textSize="16sp" />
 
                 <Button
@@ -122,8 +124,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/id_imgProd"
-                    android:layout_marginTop="35dp"
                     android:layout_marginLeft="2dp"
+                    android:layout_marginTop="35dp"
                     android:layout_toRightOf="@+id/coracao"
                     android:text="Add To Wish List"
                     android:textColor="#000"
@@ -143,15 +145,53 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/id_imgProd"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="35dp"
                     android:layout_toRightOf="@+id/imgTicket"
                     android:text="Add To Compare"
                     android:textColor="#000"
-                    android:textSize="14dp"
-                    android:layout_marginTop="35dp"
-                    android:layout_marginLeft="2dp"/>
+                    android:textSize="14dp" />
             </RelativeLayout>
 
         </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/txtDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/id_CardView"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="50dp"
+            android:text="Descripition"
+            android:textColor="#47BFD0"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txtProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtDesc"
+            android:layout_marginLeft="30dp"
+            android:text="Product Code: Nescafé Classic 200gm"
+            android:textColor="#F15458" />
+
+        <TextView
+            android:id="@+id/txtReward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtProduct"
+            android:layout_marginLeft="30dp"
+            android:text="Reward Points: 49"
+            android:textColor="#F15458" />
+
+        <TextView
+            android:id="@+id/txtAvailad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtReward"
+            android:layout_marginLeft="30dp"
+            android:text="Availability: In Stock"
+            android:textColor="#F15458" />
 
     </RelativeLayout>
 
