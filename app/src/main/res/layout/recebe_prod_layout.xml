@@ -6,191 +6,217 @@
     android:orientation="vertical">
 
     <RelativeLayout
-        android:id="@+id/id_principal"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:id="@+id/idToobar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/txtProd"
-            android:layout_width="wrap_content"
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/id_ToobarCarrinho"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="15dp"
-            android:text="Produto:"
-            android:textColor="#47BFD0"
-            android:textSize="16sp" />
+            android:background="@drawable/toobar_birpo">
 
-        <TextView
-            android:id="@+id/txtRecProd"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="15dp"
-            android:layout_toRightOf="@+id/txtProd"
-            android:textColor="#47BFD0"
-            android:textSize="16dp" />
+            <Button
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/ic_dehaze" />
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/id_CardView"
-            android:layout_width="370dp"
-            android:layout_height="280dp"
-            android:layout_below="@+id/txtRecProd"
-            android:layout_marginLeft="20dp"
-            app:cardCornerRadius="4dp">
+            <ImageView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="110dp"
+                android:src="@drawable/birpo_min" />
 
-            <RelativeLayout
-                android:id="@+id/id_Card"
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <RelativeLayout
+            android:id="@+id/id_principal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/id_ToobarCarrinho">
+
+
+            <TextView
+                android:id="@+id/txtProd"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:text="Produto:"
+                android:textColor="#47BFD0"
+                android:textSize="16sp" />
 
-                <ImageView
-                    android:id="@+id/id_imgProd"
-                    android:layout_width="180dp"
-                    android:layout_height="180dp"
-                    android:layout_marginTop="25dp"
-                    />
+            <TextView
+                android:id="@+id/txtRecProd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/txtProd"
+                android:textColor="#47BFD0"
+                android:textSize="16dp" />
 
-                <TextView
-                    android:id="@+id/txtTamanho"
+            <androidx.cardview.widget.CardView
+                android:id="@+id/id_CardView"
+                android:layout_width="370dp"
+                android:layout_height="280dp"
+                android:layout_below="@+id/txtRecProd"
+                android:layout_marginLeft="20dp"
+                app:cardCornerRadius="4dp">
+
+                <RelativeLayout
+                    android:id="@+id/id_Card"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="65dp"
-                    android:layout_toRightOf="@+id/id_imgProd"
-                    android:text="Weigth: "
-                    android:textColor="#F15458"
-                    android:textSize="16sp" />
+                    android:layout_height="wrap_content">
 
-                <Button
-                    android:id="@+id/btnTamanho"
-                    android:layout_width="100dp"
-                    android:layout_height="25dp"
-                    android:layout_marginTop="64dp"
-                    android:layout_toRightOf="@+id/txtTamanho"
-                    android:background="@drawable/fundo_tamanho"
-                    android:drawableRight="@drawable/ic_details_tamanho"
-                    android:hint="Select"
-                    android:padding="2dp" />
+                    <ImageView
+                        android:id="@+id/id_imgProd"
+                        android:layout_width="180dp"
+                        android:layout_height="180dp"
+                        android:layout_marginTop="25dp" />
 
-                <TextView
-                    android:id="@+id/txtQuant"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/txtTamanho"
-                    android:layout_marginLeft="2dp"
-                    android:layout_marginTop="25dp"
-                    android:layout_toRightOf="@+id/id_imgProd"
-                    android:text="Quantily: "
-                    android:textColor="#F15458"
-                    android:textSize="16sp" />
+                    <TextView
+                        android:id="@+id/txtTamanho"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="65dp"
+                        android:layout_toRightOf="@+id/id_imgProd"
+                        android:text="Weigth: "
+                        android:textColor="#F15458"
+                        android:textSize="16sp" />
 
-                <Button
-                    android:id="@+id/btnQuant"
-                    android:layout_width="100dp"
-                    android:layout_height="25dp"
-                    android:layout_below="@+id/btnTamanho"
-                    android:layout_marginTop="21dp"
-                    android:layout_toRightOf="@+id/txtTamanho"
-                    android:background="@drawable/fundo_tamanho"
-                    android:drawableLeft="@drawable/ic_remove_quant"
-                    android:drawableRight="@drawable/ic_add_quant"
-                    android:hint="0"
-                    android:padding="2dp" />
+                    <Button
+                        android:id="@+id/btnTamanho"
+                        android:layout_width="100dp"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="64dp"
+                        android:layout_toRightOf="@+id/txtTamanho"
+                        android:background="@drawable/fundo_tamanho"
+                        android:drawableRight="@drawable/ic_details_tamanho"
+                        android:hint="Select"
+                        android:padding="2dp" />
 
-                <Button
-                    android:layout_width="85dp"
-                    android:layout_height="30dp"
-                    android:layout_below="@+id/btnQuant"
-                    android:layout_marginLeft="68dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_toRightOf="@+id/id_imgProd"
-                    android:background="@drawable/botao_login"
-                    android:text="Add To Cart"
-                    android:textAllCaps="false"
-                    android:textColor="#fff" />
+                    <TextView
+                        android:id="@+id/txtQuant"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtTamanho"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_toRightOf="@+id/id_imgProd"
+                        android:text="Quantily: "
+                        android:textColor="#F15458"
+                        android:textSize="16sp" />
 
-                <ImageView
-                    android:id="@+id/coracao"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/id_imgProd"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="35dp"
-                    android:src="@drawable/ic_favorite_border" />
+                    <Button
+                        android:id="@+id/btnQuant"
+                        android:layout_width="100dp"
+                        android:layout_height="25dp"
+                        android:layout_below="@+id/btnTamanho"
+                        android:layout_marginTop="21dp"
+                        android:layout_toRightOf="@+id/txtTamanho"
+                        android:background="@drawable/fundo_tamanho"
+                        android:drawableLeft="@drawable/ic_remove_quant"
+                        android:drawableRight="@drawable/ic_add_quant"
+                        android:hint="0"
+                        android:padding="2dp" />
 
-                <TextView
-                    android:id="@+id/txtAdd"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/id_imgProd"
-                    android:layout_marginLeft="2dp"
-                    android:layout_marginTop="35dp"
-                    android:layout_toRightOf="@+id/coracao"
-                    android:text="Add To Wish List"
-                    android:textColor="#000"
-                    android:textSize="14sp" />
+                    <Button
+                        android:layout_width="85dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/btnQuant"
+                        android:layout_marginLeft="68dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_toRightOf="@+id/id_imgProd"
+                        android:background="@drawable/botao_login"
+                        android:text="Add To Cart"
+                        android:textAllCaps="false"
+                        android:textColor="#fff" />
 
-                <ImageView
-                    android:id="@+id/imgTicket"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/id_imgProd"
-                    android:layout_marginLeft="45dp"
-                    android:layout_marginTop="35dp"
-                    android:layout_toRightOf="@+id/txtAdd"
-                    android:src="@drawable/ic_ticket" />
+                    <ImageView
+                        android:id="@+id/coracao"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/id_imgProd"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="35dp"
+                        android:src="@drawable/ic_favorite_border" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/id_imgProd"
-                    android:layout_marginLeft="2dp"
-                    android:layout_marginTop="35dp"
-                    android:layout_toRightOf="@+id/imgTicket"
-                    android:text="Add To Compare"
-                    android:textColor="#000"
-                    android:textSize="14dp" />
-            </RelativeLayout>
+                    <TextView
+                        android:id="@+id/txtAdd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/id_imgProd"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="35dp"
+                        android:layout_toRightOf="@+id/coracao"
+                        android:text="Add To Wish List"
+                        android:textColor="#000"
+                        android:textSize="14sp" />
 
-        </androidx.cardview.widget.CardView>
+                    <ImageView
+                        android:id="@+id/imgTicket"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/id_imgProd"
+                        android:layout_marginLeft="45dp"
+                        android:layout_marginTop="35dp"
+                        android:layout_toRightOf="@+id/txtAdd"
+                        android:src="@drawable/ic_ticket" />
 
-        <TextView
-            android:id="@+id/txtDesc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/id_CardView"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="50dp"
-            android:text="Descripition"
-            android:textColor="#47BFD0"
-            android:textSize="16sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/id_imgProd"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="35dp"
+                        android:layout_toRightOf="@+id/imgTicket"
+                        android:text="Add To Compare"
+                        android:textColor="#000"
+                        android:textSize="14dp" />
+                </RelativeLayout>
 
-        <TextView
-            android:id="@+id/txtProduct"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/txtDesc"
-            android:layout_marginLeft="30dp"
-            android:textColor="#F15458" />
+            </androidx.cardview.widget.CardView>
 
-        <TextView
-            android:id="@+id/txtReward"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/txtProduct"
-            android:layout_marginLeft="30dp"
-            android:text="Reward Points: 49"
-            android:textColor="#F15458" />
+            <TextView
+                android:id="@+id/txtDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/id_CardView"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="50dp"
+                android:text="Descripition"
+                android:textColor="#47BFD0"
+                android:textSize="16sp" />
 
-        <TextView
-            android:id="@+id/txtAvailad"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/txtReward"
-            android:layout_marginLeft="30dp"
-            android:text="Availability: In Stock"
-            android:textColor="#F15458" />
+            <TextView
+                android:id="@+id/txtProduct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtDesc"
+                android:layout_marginLeft="30dp"
+                android:textColor="#F15458" />
 
+            <TextView
+                android:id="@+id/txtReward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtProduct"
+                android:layout_marginLeft="30dp"
+                android:text="Reward Points: 49"
+                android:textColor="#F15458" />
+
+            <TextView
+                android:id="@+id/txtAvailad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtReward"
+                android:layout_marginLeft="30dp"
+                android:text="Availability: In Stock"
+                android:textColor="#F15458" />
+
+        </RelativeLayout>
     </RelativeLayout>
-
 </androidx.cardview.widget.CardView>
